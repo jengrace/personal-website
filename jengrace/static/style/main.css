@@ -1,0 +1,235 @@
+/* =========== BASE ================ */
+
+html {
+  background: url("/static/media/gg.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+
+}
+
+body {
+    text-align: center;
+    height: 100%;
+    margin: 0px;
+    color: white;
+    font-family: "Century Gothic", "Gill Sans", Arial, sans serif;
+  }
+
+p {
+    font-size: 22px;
+}
+
+#Header {
+    background: rgba(35,35,35,0.5);
+    padding-left: 20px;
+    margin: 10px;
+    height: 90px;
+    border-radius: 5px;
+    font-size: 300%;
+    font-family: "Century Gothic", "Gill Sans", Arial, sans serif;
+    text-align: left;
+}
+
+.Footer {
+    background: rgba(35,35,35,0.5);
+    height: 70px;
+    border-radius: 5px;
+    clear: both;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+a:link {
+    color: #F0F0F0;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.Menu {
+  font-size: 18px;
+  width: 33%;
+  white-space: nowrap;
+}
+
+.ind_comments {
+  display: block;
+  padding: 0px 10px 10px 10px;
+  font-size: 24px;
+}
+
+.tweetsofcomments {
+  display: block;
+  padding: 0px 10px 10px 10px;
+  vertical-align: right;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 0px 10px 0px 10px;
+  vertical-align: right;
+  padding-right: 20px;
+}
+
+.addingcomments {
+    border: 0;
+    padding: 20px;
+    font-size: 18px;
+    color: black;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+input[type="submit"] {
+    background: #b52719;
+    color: white;
+}
+
+.portrait {
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.error {
+    color: #b52719;
+    font-size: 25px;
+}
+
+.Name {
+    vertical-align: top;
+    padding-left: 10px;
+}
+
+.commentlink {
+    font-size: 20px;
+}
+
+.MainBody {
+    padding-bottom: 70px;
+}
+
+.separator {
+    border-top: 1px solid gray;
+    display: inline;
+    padding-left: 164px;
+}
+
+.tweets {
+    padding: 10px 0px 10px 0px;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+.tweetinfo {
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+.tweetsheader {
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 1px;
+}
+
+.col1 {
+    width: 80%;
+    margin-right: 1%;
+    float: left;
+}
+
+.col2 {
+    width: 17%;
+    float: left;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+.tweetfeedtitle {
+    display: block;
+    font-size: 28px;
+}
+
+.blogpost {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.content {
+    font-size: 20px;
+    text-align: left;
+}
+
+.diagramImage {
+    width: 100%;
+}
+
+.diagramTitle {
+    text-align: left;
+}
+
+.greeting {
+    color: white;
+    font-size: 22px;
+    text-align: center;
+}
+
+.navbar {
+    padding-right: 10px;
+}
+
+.connect {
+    padding-left: 10px;
+}
+
+.connectMessage {
+    text-align: left;
+    padding-left: 20px;
+    /*color: #3b579d*/
+    /*color: #00aced*/
+    color: #6291b1;
+}
+
+textarea {
+    width: 95%
+}
+
+
+/* ====== reset ====== */
+
+tr, div {
+    vertical-align: top;
+}

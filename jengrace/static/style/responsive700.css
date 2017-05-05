@@ -1,0 +1,78 @@
+.Name {
+    font-size: 72%;
+}
+
+p {
+    font-size: 100%;
+}
+
+#Header {
+    padding-left: 0px;
+}
+
+.Menu {
+  width: 50%;
+  font-size: 25%;
+  white-space: normal;
+}
+
+.addingcomments {
+    font-size: 16px;
+    max-width: 300px;
+}
+
+.portrait {
+    height: 150px;
+    width: 150px;
+}
+
+.ind_comments {
+    font-size: 15px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+html {
+    background: url("/static/media/gg_cropped2.png");
+    max-width: 100%;
+    height: auto;
+}
+
+.tweets {
+    float: left;
+}
+
+.tweetsofcomments {
+    font-size: 13px;
+}
+
+.tweetinfo {
+    font-size: 15px;
+}
+
+.tweetfeedtitle {
+    display: block;
+    font-size: 18px;
+}
+
+.greeting {
+    font-size: 16px;
+}
+
+.content {
+    font-size: 14px;
+}
+
+.diagramTitle {
+    font-size: 12px;
+}
+
+.diagramImage {
+    width: 100%;
+}
+
+.connectMessage {
+    display: none;
+}

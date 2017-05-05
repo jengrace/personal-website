@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="col1">
+    <div class="comments">
+        <h2>Comments:</h2>
+        {% for item in ucomments %}
+            <li class="ind_comments">{{ item.text }}</li>
+            <div class="separator"></div>
+            <br>
+        {% endfor %}
+    </div>
+</div>
+<div class="col2">
+    <div class="tweets">
+        <div class="tweetsheader">
+            <div class="tweetfeedtitle">Tweet feed:</div>
+            <div class="tweetinfo">Tweets here are influenced by the last 3 comments!</div>
+        </div>
+        {% for item in tweets %}
+            <li class="tweetsofcomments">{{ item.text }}</li>
+            <div class="separator"></div>
+            <br>
+        {% endfor %}
+   </div>
+</div>
+
+{% endblock %}

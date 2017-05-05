@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <article class="blogpost">
+        <h1>How I Built My Webpage</h1>
+        <article class="content">The technologies I used for this website were Heroku, Django, Python, PostgreSQL,
+            Jinja2, and Twitter API. This gave me the opportunity to learn how to use the web framework Django and how to host my site in Heroku.
+            It was exciting to use Django’s set of tools to build on top of. The minimum files needed for Django are
+            views, manage, urls, and settings.
+        </article>
+        <br>
+        <div class="diagram">
+            <div class="diagramTitle">Diagram: Relationship between technologies used</div>
+            <div>
+                <img class="diagramImage" src="/static/media/AboutMeFlowChart.png">
+            </div>
+        </div>
+        <br>
+        <h2>Heroku</h2>
+        <article class="content">I learned how to deploy using the hosting service Heroku. My code was contained in a Heroku Dyno which is
+            a container that runs a virtualized single operational system inside of it. To deploy my website, I would push
+            code to a Heroku git repository.
+        </article>
+        <h2>PostgreSQL and Django</h2>
+        <article class="content">PostgreSQL database is provided as an add-on by Heroku.
+            In the database I stored user comments and tweets fetched from the Twitter API. I learned how to access my
+            database in terminal using psql which serves as an interface for PostgreSQL. I populated my database using
+            Django which added an abstraction layer in front of the database. Django served as a facilitator for accessing
+            the database with methods such as getall (get all the entries in my database) and filters (take some entries
+            away from the total entries).
+        </article>
+        <h2>Twitter API and Tweepy</h2>
+        <article class="content">
+            Learning how to use the Twitter API was very exciting for me. The Twitter API allowed me to access Twitter’s database
+            and fetch tweets from it. Being able to do this with some lines of code seemed like magic! A feature I implemented is
+            having the three most recent comments influence the tweet feed on the comments page of my website. I set a limitation
+            where the word tweeted must be five or more characters to avoid pronouns such as “I” accessing the Twitter API.
+            I used a library called Tweepy to access the Twitter API which accesses the Twitter database. Tweepy served as an
+            interface between me and the Twitter API. Tweepy includes features that I used to filter the tweets being fetched
+            according to words of the user comments and also set a limit of the amount of tweets being fetched.
+            <br>
+            <br>
+            After implementing this feature, I noticed a problem. The comments page that displays user comments and Twitter feed would
+            load very slow. This was because every time that page would load, the Twitter API would be called. This is not
+            scalable. My solution for this was to fetch tweets from PostgreSQL database rather than directly from the Twitter API.
+            Because of that I needed a strategy to populate the database which was to store fetched tweets from the Twitter API
+            directly in my database. Another part of my strategy in populating the PostgreSQL database was using threading.
+            Threading allows to perform multiple tasks at one time and it is part of the Python standard library. With
+            threading, I fetch tweets on an hourly basis to avoid going over the Twitter APIs rate limit and the tweets are
+            sent to the database independently from the main processor. Tweets being shown to the page are therefore fetched
+            from the database rather than from the Twitter API which allows my page to load faster. The only drawback is that
+            the tweets added to my page are from within the last hour versus the very instant the comments page was loaded.
+        </article>
+        <h2>MVC</h2>
+        <article class="content">I used a software architectural pattern called MVC (Model-view-controller). This is a way to organize the
+            code into different layers where the VIEWS file presents the data to the user, CONTROL manipulates the data and
+            MODELS defines the data.
+        </article>
+        <h2>HTML5/CSS3/Jinja2</h2>
+        <article class="content">
+            I coded the front end of my page using HTML5 for the structure of the page and styled it with CSS3. As I was
+            studying, I discovered CSS Bootstrap framework which already provides a CSS stylesheet, some javascript includes,
+            and HTML snippets. However, I thought it was important to learn to use CSS3 without
+            Bootstrap and learn how CSS3 works from the bottom up such as using floats, positions, tinkering around
+            with the CSS box model, and making the page responsive to mobile devices. For future projects however, I might
+            consider just using CSS Bootstrap framework. I used Jinja2 templating which is a framework built with Python.
+            Jinja2 can do a lot of logic that gets pretty far with writing logical HTML. Jinja2 saved me from writing
+            repeated code by allowing to extend HTML files into other HTML files such as a base html file that includes
+            the header, footer, and google analytics tracking. This is ideal if you want to include the base html on every
+            page of your site.
+        </article>
+    </article>
+
+{% endblock %}

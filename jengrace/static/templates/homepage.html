@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <img class="portrait" src="/static/media/new_portrait.png">
+    </div>
+    <div class="addingcomments">
+        <div>{{ temp }}</div>
+        <div class="greeting"> Hi! I'm Jennifer, a San Francisco-based software engineer and proud parent of a
+            cat and dog named Chubbs and Rio. Say hello! :) </div>
+        <br>
+        <div class="error">{{ error }}</div>
+        <br>
+        <form class="commentbox" action="/" method="post">
+            <div>
+                <textarea placeholder="Type your comment here (max: 150)" name='text' maxlength="150" rows="3" cols="40"></textarea>
+            </div>
+            {% csrf_token %}
+            <div>
+                <input type="hidden" name="action" value="comment">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/media/favicon.ico">
+    <link rel="stylesheet" href="/static/style/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/static/style/main.css" type="text/css">
+    <link rel="stylesheet" href="/static/style/responsive900.css" type="text/css" media="screen and (max-width:900px)">
+    <link rel="stylesheet" href="/static/style/responsive700.css" type="text/css" media="screen and (max-width:700px)">
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <div id="Header">
+        <table>
+            <tr>
+                <td nowrap align="left" class="Name"><a href="/">Jennifer Grace</a></td>
+                <td width="55%"></td>
+                <td class="Menu">
+                    <ul class="navbar" align="right">
+                        <li><a href="/">Home</a></li>|
+                        <li><a href="/comments">Comments</a></li>|
+                        <li><a href="/blog">Blog</a></li>|
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="MainBody">
+        {% block content %}
+            <!-- Main content -- >
+        {% endblock %}
+    </div>
+    <div class="Footer">
+        <div class="connectMessage">Let's connect!</div>
+        <ul align="left" class="connect">
+            <li>
+                <a target="_blank" title="follow me on facebook" href="http://www.facebook.com/jennifer.grace.3998">
+                <img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook30x30.png" border=0></a>
+            </li>
+            <li class="icons">
+                <a target="_blank" title="follow me on Twitter" href="http://www.twitter.com/jennanngrace">
+                <img alt="follow me on Twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter30x30.png" border=0></a>
+            </li>
+            <li>
+                <style>.ig-b- { display: inline-block; }
+                .ig-b- img { visibility: hidden; }
+                .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+                .ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+                @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+                .ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }</style>
+                <a href="https://www.instagram.com/jennanngrace/?ref=badge" class="ig-b- ig-b-32"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
+
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/pub/jennifer-grace/113/70b/20a">
+                <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_120x33.png" width="120" height="33" border="0" alt="View Jennifer Grace's profile on LinkedIn">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- analytics tracking: -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-81676548-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</body>

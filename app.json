@@ -1,0 +1,8 @@
+{
+  "name": "Jen Grace",
+  "description": "A website about me.",
+  "image": "heroku/python",
+  "repository": "",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}
